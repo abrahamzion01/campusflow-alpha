@@ -54,3 +54,15 @@ Tests should not depend on interactive terminal input.
 ## 7. Collaboration
 
 Both team members will use the same ticket structure and agreed function contracts. We will review these decisions together before integrating our branches.
+
+## 8. Function Contracts
+
+- `create_ticket()` returns the newly created ticket dictionary.
+- `assign_ticket()` modifies the existing ticket dictionary in the shared list.
+- `update_status()` modifies the existing ticket dictionary after validating the requested transition.
+- `get_work_queue()` returns a sorted list of unresolved tickets.
+- `generate_report()` returns ticket counts grouped by status and priority.
+- `load_tickets()` returns the loaded ticket list, or an empty list if the file is missing.
+- `save_tickets()` saves the shared ticket list to JSON.
+
+Invalid operations must produce clear errors rather than silently failing.
